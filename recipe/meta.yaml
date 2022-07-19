@@ -10,11 +10,11 @@ source:
   sha256: 8bb4d2672672fe1295a00ad34738a1fe2800556f6e4fff48a5812324fdbf650b
 
 build:
-  skip: true  # [py<37]
+  skip: true  # [(py<37) or (python_impl == 'pypy')]
   script:
     - export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"  # [osx]
     - {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 2
 
 requirements:
   build:
