@@ -1,5 +1,5 @@
 {% set name = "picologging" %}
-{% set version = "0.5.1" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/picologging-{{ version }}.tar.gz
-  sha256: 8bb4d2672672fe1295a00ad34738a1fe2800556f6e4fff48a5812324fdbf650b
+  sha256: ba9808cbd2c87e69e7679a3b584201854e97679826672c2d4ccd376f8a1387fb
 
 build:
   skip: true  # [(py<37) or (python_impl == 'pypy')]
   script:
     - export CXXFLAGS="${CXXFLAGS} -D_LIBCPP_DISABLE_AVAILABILITY"  # [osx]
     - {{ PYTHON }} -m pip install . -vv
-  number: 2
+  number: 0
 
 requirements:
   build:
