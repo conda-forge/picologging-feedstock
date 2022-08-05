@@ -1,5 +1,5 @@
 {% set name = "picologging" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/picologging-{{ version }}.tar.gz
-  sha256: ba9808cbd2c87e69e7679a3b584201854e97679826672c2d4ccd376f8a1387fb
+  sha256: 720788043b677a49aea47fae8013988bbc1af2cd0df05e884b3e285f71423e18
 
 build:
   skip: true  # [(py<37) or (python_impl == 'pypy')]
