@@ -1,5 +1,5 @@
 {% set name = "picologging" %}
-{% set version = "0.7.2" %}
+{% set version = "0.8.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/picologging-{{ version }}.tar.gz
-  sha256: 7172e8eb097066bfd057dd953250138237f800e0c3399c66430741dd31f76cd9
+  sha256: d0ee6a731a56a4cc968f3a989852fa7af3398310776309a78d330a90f2dcc989
 
 build:
   skip: true  # [(py<37) or (python_impl == 'pypy')]
@@ -30,12 +30,16 @@ requirements:
     - python
 
 test:
+  source_files:
+    - tests
   imports:
     - picologging
   commands:
     - pip check
+    - pytest -vvv --capture=tee-sys tests
   requires:
     - pip
+    - pytest
 
 about:
   home: https://github.com/microsoft/picologging
