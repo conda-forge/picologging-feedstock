@@ -30,12 +30,16 @@ requirements:
     - python
 
 test:
+  source_files:
+    - tests
   imports:
     - picologging
   commands:
     - pip check
+    - pytest -vvv --capture=tee-sys tests
   requires:
     - pip
+    - pytest
 
 about:
   home: https://github.com/microsoft/picologging
