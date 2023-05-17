@@ -19,13 +19,13 @@ build:
 requirements:
   build:
     - {{ compiler('cxx') }}
-    - setuptools >=42
   host:
     - cmake >=3.18
     - ninja
     - pip
     - python
-    - scikit-build >=0.13
+    - scikit-build >=0.17.0
+    - setuptools >=65.4.1
   run:
     - python
 
