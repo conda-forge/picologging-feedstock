@@ -1,11 +1,11 @@
-About picologging
-=================
+About picologging-feedstock
+===========================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/picologging-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/microsoft/picologging
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/picologging-feedstock/blob/main/LICENSE.txt)
 
 Summary: A fast and lightweight logging library for Python
 
